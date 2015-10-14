@@ -60,7 +60,7 @@ def main():
         print ' '
         print ' REMEMBER: cal2homebank COMES WITHOUT WARRANTY OF ANY KIND '
         print ' '
-        print ' trying to extract expense from: ' + calendar_src
+        print ' trying to extract expenses from: ' + calendar_src
 
 
     data = extract_calendar_data(calendar_src)
