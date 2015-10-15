@@ -9,7 +9,6 @@ import urllib2  # the lib that handles the url stuff
 
 ini_file_name = "settings.ini"
 
-
 def extract_calendar_data(src):
     if 'http://' in src or 'https://' in src:
         data = urllib2.urlopen(src)  # it's a file like object and works just like a file
@@ -20,6 +19,24 @@ def extract_calendar_data(src):
 
     return data
 
+
+def convert_date(indate, target='csv'):
+    """
+    Convert the ical DTSTART value into a suitable date
+    :param indate: the value of DTSTART
+    :param target: 'csv' or 'xhb'
+    :return:
+    """
+    separator = '-'
+    converted_date = ''
+
+    if target == 'csv':
+        converted_date = "{}-{}-{}".format(indate[6:8], indate[4:6], indate[2:4])
+    elif target == 'xhb':
+        # todo convert into XML date
+        pass
+
+    return converted_date
 
 def main():
 
@@ -65,6 +82,7 @@ def main():
 
     data = extract_calendar_data(calendar_src)
 
+    print convert_date('20151231')
 
 if __name__ == "__main__":
     main()
