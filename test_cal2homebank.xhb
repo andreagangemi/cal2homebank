@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<homebank v="1.1000000000000001">
+<properties title="cal2homebank" auto_smode="1" auto_weekday="1" />
+<account key="1" pos="1" type="2" name="Contanti" initial="0" minimum="0" />
+<account key="2" pos="2" type="1" name="banca" number="13456" bankname="Bank of Fuffoland" initial="1000" minimum="0" />
+</homebank>
